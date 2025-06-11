@@ -1,0 +1,19 @@
+header{
+    background: rgb(248, 198, 151);
+    height: 60px;
+}
+
+.quote{
+    background: #f0e87a;
+}
+
+.link{
+    background: purple;
+    color: #fff;
+    height: 300px;
+}
+
+.link a{
+
+    color: #fff;
+}
