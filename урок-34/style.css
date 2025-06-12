@@ -1,0 +1,29 @@
+.Open{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.crossed_out{
+    text-decoration: line-through;
+}
+
+.text_center{
+    text-align: center;
+    font-size: 20px;
+}
+
+.shadow{
+    word-spacing: 30px;
+    text-shadow: 1px 1px 2px #dd92ff;
+    text-decoration: overline;
+    text-decoration-style: wavy;
+}
+
+.long{
+    letter-spacing: 5px;
+    text-decoration: underline;
+    text-decoration-style: double;
+}
