@@ -1,0 +1,22 @@
+.main_box{
+    flex-wrap: wrap;
+    overflow: auto;
+    display: flex;
+    height: 560px;
+    border: 2px solid #696969;
+    border-bottom-left-radius: 19px;
+    border-top-left-radius: 19px;
+}
+
+.mini_box{
+    background: #b48a52;
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 19px;
+    box-shadow: inset -2px -2px 5px #696969, inset 2px 2px 5px #696969;
+}
+
+.mini_box p, h2{
+    margin-left: 20px;
+}
