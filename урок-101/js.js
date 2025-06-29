@@ -22,13 +22,27 @@ function bigNumbers(arr){
 
     // ===========================================//
 
-    const firstNumber = 20
-    const secondNumber = 10
+    const num1 = 20 
+    const num2 = 10
+    const operator = 'plus'
 
-    console.log(firstNumber *secondNumber)
+function calculate(num1, num2, operator) {
+    let result;
 
-    console.log(firstNumber -secondNumber)
+    if (operator === 'plus') {
+    result = num1 + num2;
+    } else if (operator === 'minus') {
+    result = num1 - num2;
+    } else if (operator === 'multiply') {
+    result = num1 * num2;
+    } else if (operator === 'divide') {
+    if (num2 === 0) {
+        return "Деление на ноль!";
+    }
+    result = num1 / num2;
+    } else {
+    return "Неизвестный оператор";
+    }
 
-    console.log(firstNumber +secondNumber)
-
-    console.log(firstNumber /secondNumber)
+    return result;
+}
