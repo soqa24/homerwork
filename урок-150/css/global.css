@@ -1,11 +1,14 @@
 :root {
     --general-text: #312C27;
     --accent-text: #1F1711;
+    --accent-color-2: #CEAAD0;
     --general-bg: #FFF9F4;
     --accent-bg: #FFE0CB;
     --accent-color: #FFA55C;
+    --input-color: #AC907A;
     --transition: all .4s;
     --border-radius: 20px;
+    --
 }
 
 .body {
