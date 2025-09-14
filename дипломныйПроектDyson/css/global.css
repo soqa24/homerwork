@@ -1,0 +1,39 @@
+
+:root {
+    --general-text: #111111;
+    --fz__main: 24px;
+    --general-bg:#f8f8f8 ;
+    --accent-color--2: #fff;
+    --accent-color: #C5358C;
+    --border-radius: 3px;
+    --transition: all .3s;
+}
+
+.body {
+    color:var(--general-text);
+    background: #fff;
+    font-family: 'Open Sans', "Arial", serif;
+    font-size: 18px;
+}
+
+.body--opened-menu {
+    overflow: hidden;
+}
+
+.body--opened-modal {
+    overflow: hidden;
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
