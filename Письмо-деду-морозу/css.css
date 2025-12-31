@@ -1,0 +1,224 @@
+#snowCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Чтобы снег не мешал кликать по кнопкам и ссылкам */
+    z-index: 9999;
+    /* Чтобы снег был поверх всех элементов */
+}
+
+body {
+    background: #6a5acd;
+}
+
+/* Общий контейнер (само письмо) */
+.letter-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fffcf0;
+    /* Кремовый фон как на фото */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #111;
+}
+
+/* Красный заголовок */
+.letter-header {
+    background-color: #d32f2f;
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+}
+
+.letter-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    /* Эффект свечения */
+    text-shadow: 0 0 10px #f9cc89, 0 0 20px #f9cc89;
+    letter-spacing: 1px;
+
+}
+
+.letter-date {
+    margin-top: 10px;
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Тело письма */
+.letter-body {
+    padding: 30px;
+}
+
+.letter-greeting {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #c62828);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Сетка для колонок */
+.letter-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+/* Вертикальный пунктир между колонками */
+.letter-grid::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+.letter-column h3 {
+    text-align: center;
+    color: #c62828;
+    margin-bottom: 20px;
+}
+
+/* Списки с иконками */
+.letter-list {
+    list-style: none;
+    padding: 0;
+}
+
+.letter-list li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+/* Иконки подарков и звезд */
+/* Иконки заменены на галочки SVG */
+.wishes li::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    position: absolute;
+    left: 0;
+    top: 2px;
+    /* Подправьте положение по вертикали, если нужно */
+}
+
+.promises li::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%234CAF50" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>');
+    position: absolute;
+    left: 0;
+    top: 2px;
+    /* Подправьте положение по вертикали, если нужно */
+}
+
+
+/* Бирюзовый футер */
+.letter-footer {
+    background-color: #4c1f6e;
+    height: 60px;
+    position: relative;
+}
+
+.footer-star {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #e2f255;
+    color: #ffb300;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+/* Контейнер для позиционирования */
+.signature-container {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+/* Стили текста подписи */
+.signature-text {
+    font-family: 'Cursive', 'Brush Script MT', cursive;
+    /* Рукописный шрифт */
+    font-size: 1.2rem;
+    color: #333;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Тонкая линия под подписью */
+    display: inline-block;
+    padding-right: 100px;
+}
+
+/* Сургучная печать */
+.wax-seal {
+    position: absolute;
+    right: 20px;
+    top: -20px;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(#d32f2f, #9a0007);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    transform: rotate(-15deg);
+    /* Печать чуть под углом */
+    border: 2px solid #b71c1c;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+/* Внутренний круг печати */
+.wax-seal::before {
+    content: '';
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+}
+
+/* Текст внутри печати */
+.seal-inner {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: serif;
+    font-weight: bold;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* Эффект неровных краев печати */
+.wax-seal {
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%,
+            50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 600px) {
+    .letter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .letter-grid::after {
+        display: none;
+    }
+}
